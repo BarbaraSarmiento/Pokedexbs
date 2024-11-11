@@ -1,0 +1,26 @@
+<header class="header">
+    <div class="container">
+        <img src="../../../../assets/pokeball.png" alt="Pokéball" class="pokeball">
+        <h1>Pokédex</h1>
+        <span class="Text">Hecho con estrés por Barb</span>
+
+        <div class="Buscador">
+        </div>
+        <img src="../../../../assets/pokeball.png" alt="Pokéball" class="pokeball">
+    </div>
+</header>
+
+<main class="Contenedor">
+    <div class="Imagen">
+        <app-pokedex-view
+        [pokemon]="pokemonseleccionado"
+        ></app-pokedex-view>
+    </div>
+    <div class="Tarjetas" #tarjets (scroll)="onScroll($event)">
+        <app-grafico *ngFor="let pokemon of listaPokemon" [data]="pokemon"
+        [Seleccionado]="pokemon.name === pokemonseleccionado?.name"
+        (clickeado)="TarjetaClick($event)"
+        ></app-grafico>
+    </div>
+</main>
+

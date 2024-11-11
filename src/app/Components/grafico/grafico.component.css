@@ -1,0 +1,75 @@
+/*grafico.component.css*/
+@font-face {
+    font-family: 'Game';
+    src: url('../../../Letras/Gameplay.ttf'); 
+}
+#container {
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Fondo inicial transparente */
+    border-radius: 25px;
+    padding: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Transición suave del color */
+    
+}
+
+#flecha {
+    width: 20px;
+    margin-right: 10px;
+    opacity: 0; /* Ocultar flecha inicialmente */
+    transition: opacity 0.3s ease; /* Transición suave para la flecha */
+}
+
+#tarjeta {
+    display: flex;
+    align-items: center;
+    background-color: #fcd556;
+    border-radius: 25px 5px 5px 25px;
+    width: 100%;
+    padding-left: 10px;
+    gap: 1rem;
+    position: relative;
+    transition: background-color 0.3s ease; /* Transición suave del color */
+   
+}
+
+#circulo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.pokemon-img {
+    width: 40px;
+    height: auto;
+}
+
+.pokemon-name {
+    font-family: Game;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+}
+
+.pokemon-number {
+    font-family: Game;
+    font-size: 0.9rem;
+    color: #b90e0e;
+}
+
+/* Efecto hover para cambiar el fondo y mostrar la flecha */
+#container:hover {
+    background-color: #0d8198; /* Cambia el fondo al pasar el mouse */
+}
+
+#container:hover #flecha {
+    opacity: 1; /* Aparece la flecha al pasar el mouse */
+}
+

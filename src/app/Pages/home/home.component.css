@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'Pokemon';
+    src: url('../../../Letras/Pokemon\ Solid.ttf');
+}
+@font-face {
+    font-family: 'Game';
+    src: url('../../../Letras/Gameplay.ttf'); /* Asegúrate de que la ruta sea correcta */
+}
+@font-face {
+    font-family: 'Blood';
+    src: url('../../../Letras/Blood.ttf'); /* Asegúrate de que la ruta sea correcta */
+}
+.header {
+    height: 60px;
+    background-color: #0d8198; /* Color de fondo azul */
+    padding: 20px;
+    border-radius: 10px;
+    animation: scaleUp 0.5s ease; /* Animación de escalado */
+}
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9); /* Inicia un poco más pequeño */
+    }
+    to {
+        transform: scale(1); /* Escala al tamaño original */
+    }
+}
+.Text {
+    opacity: 0; /* Inicia oculto */
+    animation: fadeIn 1s forwards; /* Desvanecimiento */
+    font-family: Blood;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Se muestra completamente */
+    }
+}
+.container {
+    background-color: rgb(110, 217, 223);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    img{
+        width: 40px; /* Ajusta el tamaño según sea necesario */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+    h1 {
+        color: yellow;
+        font-family: 'Pokemon';
+        font-size: 30px;
+        margin: 0 10px; 
+        text-shadow: 
+        0 0 10px rgba(0, 81, 255, 0.8), /* Sombra azul */
+        0 0 20px rgb(0, 123, 255), /* Sombra azul más intensa */
+        1px 1px 0 red,  /* Sombra roja (derecha-abajo) */
+        -1px -1px 0 red, /* Sombra roja (izquierda-arriba) */
+        1px -1px 0 red, /* Sombra roja (derecha-arriba) */
+        -1px 1px 0 red; /* Sombra roja (izquierda-abajo) */
+        padding: 5px;
+        border-radius: 5px; /* Opcional */
+    }
+    
+}
+
+.Informacion {
+    display: flex;
+    align-items: center;
+}
+
+.pokemon-count {
+    background-color: #fff; /* Fondo blanco para el contador */
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.count, .total {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sort-button {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #007bff; /* Texto azul */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sort-button:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+}
+
+.Contenedor{
+    align-items: center;
+     height: calc(100vh - 100px);
+     display: grid;
+     grid-template-columns: 1.7fr 1fr ;
+     background-image: url('/assets/fondi.gif');
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.Imagen{
+    margin-left: 90px;
+}
+.Tarjetas{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-height: 100%;
+    overflow-y:scroll;
+
+    
+}
+/* css tricks style  */
+.Tarjetas::-webkit-scrollbar {
+    width: 20px;
+    
+  }
+
+.Tarjetas::-webkit-scrollbar-thumb {
+  background: #00f2ff;
+  border-radius: 25px;
+ }
+/* minimalist design */ 
+.Tarjetas::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+.Tarjetas::-webkit-scrollbar-track {
+  background: rgb(46, 252, 255);
+  border-radius: 10px;
+}
+
+.Tarjetas::-webkit-scrollbar-thumb {
+  background: rgb(255, 6, 6);
+  border-radius: 10px;
+}
+
+.Tarjetas::-webkit-scrollbar-thumb:hover {
+  background: rgb(131, 236, 255);
+  border-radius: 10px;
+}
+
+.Tarjetas::-webkit-scrollbar-thumb:active {
+  background: rgb(251, 255, 4);
+  border-radius: 10px;
+}
+
+/* striped lines */
+.Tarjetas::-webkit-scrollbar {
+    width: 20px;
+}
+.Tarjetastml::-webkit-scrollbar-track {
+background-image: repeating-linear-gradient(45deg, red 0, red 1px, transparent 0, transparent 50%);
+background-size: 10px 10px;
+}
+
+
+/* animated  */
+.Tarjetas::-webkit-scrollbar {
+  width: 20px; 
+}
+
+.Tarjetas::-webkit-scrollbar-track {
+  background:  linear-gradient(0deg, rgb(0, 255, 251) 0%, rgba(7, 0, 211, 1) 100%);
+}
+
+.pokeball {
+    width: 40px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    animation: bounce 1s infinite; /* Agrega la animación */
+    display: block;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px); /* Altura del rebote */
+    }
+    60% {
+        transform: translateY(-10px); /* Altura del rebote intermedio */
+    }
+}

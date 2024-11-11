@@ -1,0 +1,20 @@
+/*pokedex-view.componet.css*/
+#Container{
+    border: 4px solid #8cbbf1;
+    border-radius: 10px;
+    outline: 12px solid #f8e55c;
+    max-width: 500px;
+    aspect-ratio: 1;
+    background: repeating-linear-gradient(
+        to bottom,
+        #8cbbf1,
+        #8cbbf1 1px,
+        #f8e55c 1px,
+        #f8e55c 2px
+    );
+    img{
+        width: 100%;
+        image-rendering: pixelated;
+    }
+
+}
