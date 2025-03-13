@@ -1,4 +1,4 @@
-//COMPONENTE PADRE
+//COMPONENTE PADRE TS
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { PokedexViewComponent } from "../../Components/pokedex-view/pokedex-view.component";
 import { GraficoComponent } from "../../Components/grafico/grafico.component";
